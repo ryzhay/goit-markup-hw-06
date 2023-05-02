@@ -708,17 +708,19 @@ button {
 }
 
 .modal-icon {
+  fill: currentColor;
   width: 8px;
   height: 8px;
-  fill: #2e2f42;
+  color: var(--logo-dark-txt-container);
 }
-.modal-icon:hover,
-.modal-icon:focus {
-  fill: var(--light-txt-cl);
-}
-
 .modal-btn:hover,
 .modal-btn:focus {
+  background-color: var(--okean-active-btn);
+}
+
+.modal-btn:hover .modal-icon,
+.modal-btn:focus .modal-icon {
+  fill: var(--light-txt-cl);
   background-color: var(--okean-active-btn);
 }
 .modal-title {
@@ -784,6 +786,9 @@ button {
   display: block;
   padding: 8px 16px;
   width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  resize: none;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1;
